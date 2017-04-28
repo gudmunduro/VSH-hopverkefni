@@ -1,5 +1,6 @@
 ﻿body
 {
+    background-color: #F5F5F5;
 }
 
 /*
@@ -14,6 +15,7 @@
     height: 48px;
     overflow: hidden;
     transition: transform 0.5s;
+    box-shadow: 0 4px 2px -2px grey;
 }
 .mobileNav a{
     display: block;
@@ -51,7 +53,7 @@
     width: 100vw;
     height: calc(300px);
     background-color: #FF5722;
-    opacity: 0.3;
+    opacity: 1;
     overflow: hidden;
     transform: translateY(calc(-300px));
     transition: transform 0.5s, opacity 0.2s;
@@ -113,7 +115,7 @@
     media
 */
 
-@media screen and (min-width: 60em){
+@media screen and (min-width: 35em){
     .mobileNav{
         display: none;
     }
@@ -121,6 +123,7 @@
         height: auto;
         transform: none;
         opacity: 1;
+        box-shadow: 0 4px 2px -2px grey;
     }
     .navBar h2{
         display: none;
