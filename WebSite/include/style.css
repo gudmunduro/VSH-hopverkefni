@@ -43,7 +43,14 @@
 .mobileNav a:active {
     background-color: #BF360C;
 }
+.mobileNavTransparent{
+    background-color: transparent;
+    box-shadow: none;
+    transition: transform 0.5s, background-color 0.5s;
+}
 .menuOpen{
+    background-color: #FF5722;
+    box-shadow: 0 4px 2px -2px grey;
     transform: translateY(calc(300px));
 }
 .menuOpen a{
@@ -131,6 +138,10 @@
         transform: none;
         opacity: 1;
         box-shadow: 0 4px 2px -2px grey;
+    }
+    .navBarTransparent{
+        box-shadow: none;
+        background-color: transparent;
     }
     .navBar h2{
         display: none;
