@@ -170,7 +170,6 @@ td:first-child {
     border-left: 1px solid #7B7C7F;
 }
 tfoot {
-    text-align: right;
     overflow: hidden;
 }
 tfoot tr:last-child {
