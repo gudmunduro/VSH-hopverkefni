@@ -1,13 +1,14 @@
 ﻿body
 {
     background-color: #F5F5F5;
+    overflow: hidden;
 }
 .mainBody {
     background-image: url(img/main_background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center top;
     height: 100vh;
 }
 
