@@ -124,7 +124,66 @@
     opacity: 1;
 }
 
+/*
+    Tafla    
+*/
 
+table {
+    margin:auto;
+    margin-top:5em;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #4a4a4d;
+    font: 14px/1.4 "Lucida Console", Monaco, monospace;
+}
+th,
+td {
+    padding: 12px 17px;
+    vertical-align: middle;
+}
+thead {
+	overflow: hidden;
+    background: #22caff;
+    background: linear-gradient(#22caff, #3cd0ff);
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+th:first-child {
+    border-top-left-radius: 9px;
+    text-align: left;
+}
+th:last-child {
+    border-top-right-radius: 9px;
+}
+tbody tr:nth-child(even) {
+    background: #ff7e55;
+}
+tbody tr:nth-child(odd) {
+    background: #e2f8ff;
+}
+td {
+    border-bottom: 1px solid #7B7C7F;
+    border-right: 1px solid #7B7C7F;
+}
+td:first-child {
+    border-left: 1px solid #7B7C7F;
+}
+tfoot {
+    text-align: right;
+    overflow: hidden;
+}
+tfoot tr:last-child {
+    background: #6fdcff;
+    color: #1b0634;
+    font-weight: bold;
+}
+tfoot tr:last-child td:first-child {
+    border-bottom-left-radius: 9px;
+}
+tfoot tr:last-child td:last-child {
+    border-bottom-right-radius: 9px;
+}
 
 /*
     media
