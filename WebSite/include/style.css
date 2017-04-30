@@ -12,6 +12,8 @@
     height: 100vh;
 }
 
+
+
 /*
     Header og takki til þess opna valmyndina fyrir mobile
 */
@@ -58,6 +60,8 @@
 .menuOpen a{
     width: 100%;
 }
+
+
 
 /*
     Valmyndin
@@ -125,6 +129,8 @@
     opacity: 1;
 }
 
+
+
 /*
     Tafla    
 */
@@ -185,13 +191,21 @@ tfoot tr:last-child td:last-child {
     border-bottom-right-radius: 9px;
 }
 
+
+
 /*
     Titill á aðalsíðu
 */
 
+.mainDiv {
+    display: block;
+    margin: 30vh auto 50px;
+    width: 300px;
+    padding: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
 .mainTitle{
     color: white;
-    margin: 30vh 0 50px;
     text-align: center;
     font-family: Verdana;
     font-weight: normal;
@@ -205,16 +219,71 @@ tfoot tr:last-child td:last-child {
     font-family: Verdana;
     font-weight: lighter;
     font-size: 2.0em;
-    background-color: #FF5722;
-    border: 2px solid #D84315;
+    background-color: transparent;
+    border: 2px solid rgba(69, 69, 69, 0.45);
+    border-radius: 5px;
     padding: 5px;
     text-align: center;
-    transition: transform 0.8s ease-in-out, background-color 0.3s linear;
+    transition: transform 0.8s ease-in-out, background-color 0.3s linear, border 0.3s linear;
 }
-.openFormButton:hover{
-    background-color: #D84315;
+.openFormButton:hover {
+    background-color: #FF5722;
+    border-color: #FF5722;
     cursor: default;
 }
+
+@keyframes hideMainDiv{
+    from {
+        transform: none;
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+
+
+/*
+    Skráningarfrom á aðalsíðu
+*/
+
+.form{
+    margin: 0 auto;
+}
+
+.form input[type=text]{
+    display: block;
+    margin: 20px auto;
+    background-color: rgba(69, 69, 69, 0.37);
+    border: 2px solid rgba(69, 69, 69, 0.45);
+    outline-color: gray;
+    font-size: 1.3em;
+}
+.form input[type=submit], .form input[type=button]{
+    display: block;
+    margin: 5px auto;
+    width: 160px;
+    color: white;
+    font-family: Verdana;
+    font-weight: lighter;
+    font-size: 2.0em;
+    background-color: transparent;
+    border: 2px solid rgba(69, 69, 69, 0.45);
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    outline: none;
+    transition: transform 0.8s ease-in-out, background-color 0.3s linear, border 0.3s linear;
+}
+.form input[type=submit]:hover, .form input[type=button]:hover{
+    background-color: #FF5722;
+    border-color: #FF5722;
+    cursor: default;
+}
+
+
 
 /*
     media
