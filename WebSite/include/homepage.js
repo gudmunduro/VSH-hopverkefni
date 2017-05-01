@@ -69,6 +69,8 @@ class Form {
         Form.startCloseAnimation()
         setTimeout(Form.removeForm, 500)
         setTimeout(Form.showMainForm, 510)
+        setTimeout(Form.animateMainFormIn, 520)
+        setTimeout(Form.finishRemoval, 1020)
     }
 
     static startCloseAnimation()
@@ -85,6 +87,17 @@ class Form {
     }
 
     static showMainForm()
+    {
+        document.getElementById("mainDiv").style.display = ""
+    }
+
+    static animateMainFormIn()
+    {
+        document.getElementById("mainDiv").style.animation = "hideMainDiv 0.5s forwards"
+        document.getElementById("mainDiv").style.animationDirection = "reverse"
+    }
+
+    static finishRemoval()
     {
         $("#mainDiv").removeAttr("style")
     }
