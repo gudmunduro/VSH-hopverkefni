@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\WebSite",
-    "\\WebSite\\include"
+    "\\WebSite\\Dagskra",
+    "\\WebSite\\include",
+    "\\WebSite\\Reglur",
+    "\\WebSite\\Samband"
   ],
-  "SelectedNode": "\\WebSite",
   "PreviewInSolutionExplorer": false
 }
