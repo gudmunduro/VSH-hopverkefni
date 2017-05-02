@@ -171,7 +171,7 @@ class Form {
 
     useOldAccount()
     {
-        location.href = ""
+        createSimpleLogin("/hv")
     }
 
     // close

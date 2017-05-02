@@ -265,6 +265,8 @@ tfoot tr:last-child td:last-child {
     outline-color: gray;
     font-size: 1.3em;
     color: white;
+    width: 260px;
+    height: 30px;
 }
 .form select{
     font-size: 1.0em;
@@ -291,6 +293,64 @@ tfoot tr:last-child td:last-child {
     cursor: default;
 }
 
+
+
+/*
+    Login form
+*/
+
+.loginDiv {
+    position: fixed;
+    width: 80vw;
+    height: 316px;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    background-color: rgba(20, 20, 20, 0.54);
+    border: 2px solid rgba(91, 91, 91, 0.54);
+    border-radius: 5px;
+    box-shadow: 0 0 8px black;
+}
+.loginDiv h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Verdana;
+    font-weight: lighter;
+}
+.loginDiv form{
+    margin-top: 10px;
+}
+.loginDiv input[type=text], .loginDiv input[type=password]{
+    background-color: transparent;
+    border: 2px solid rgba(91, 91, 91, 0.84);
+    outline-color: gray;
+    display: block;
+    margin: 10px auto;
+    padding: 3px;
+    font-size: 1.1em;
+}
+.loginDiv input[type=submit], .loginDiv input[type=button] {
+    display: block;
+    margin: 20px auto;
+    width: 180px;
+    color: white;
+    font-family: Verdana;
+    font-weight: lighter;
+    font-size: 2.0em;
+    background-color: transparent;
+    border: 2px solid rgba(91, 91, 91, 0.84);
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    outline: none;
+    transition: background-color 0.3s linear, border 0.3s linear;
+}
+.loginDiv input[type=submit]:hover, .loginDiv input[type=button]:hover{
+    background-color: #FF5722;
+    border-color: #FF5722;
+    cursor: default;
+}
 
 
 /*
@@ -329,9 +389,15 @@ tfoot tr:last-child td:last-child {
         display: table-cell;
     }
     .mainDiv{
-        width: 600px;
+        width: 500px;
+    }
+    .form input[type=text], .form input[type=tel], .form input[type=email], .form input[type=password], .form select{
+        width: 380px;
     }
     .form select{
         font-size: 1.3em;
+    }
+    .loginDiv{
+        width: 300px;
     }
 }
