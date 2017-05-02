@@ -249,22 +249,30 @@ tfoot tr:last-child td:last-child {
     Skráningarfrom á aðalsíðu
 */
 
+.formDiv{
+    margin-top: 10vh;
+}
+
 .form{
     margin: 0 auto;
 }
 
-.form input[type=text]{
+.form input[type=text], .form input[type=tel], .form input[type=email], .form input[type=password], .form select{
     display: block;
     margin: 20px auto;
     background-color: rgba(69, 69, 69, 0.37);
     border: 2px solid rgba(69, 69, 69, 0.45);
     outline-color: gray;
     font-size: 1.3em;
+    color: white;
+}
+.form select{
+    font-size: 1.0em;
 }
 .form input[type=submit], .form input[type=button]{
     display: block;
     margin: 5px auto;
-    width: 160px;
+    width: 180px;
     color: white;
     font-family: Verdana;
     font-weight: lighter;
@@ -319,5 +327,11 @@ tfoot tr:last-child td:last-child {
     }
     .navBar li{
         display: table-cell;
+    }
+    .mainDiv{
+        width: 600px;
+    }
+    .form select{
+        font-size: 1.3em;
     }
 }
