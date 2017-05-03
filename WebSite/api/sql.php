@@ -1,10 +1,9 @@
 <?php
 
-$username = "torfaera";
-$password = "password";
-
 function connect()
 {
+    $username = "torfaera";
+    $password = "password";
     $conn = new mysqli("localhost", $username, $password, "torfaera");
     if ($conn->connect_error)
     {
