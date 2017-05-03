@@ -161,6 +161,7 @@ class Form {
 
         // add to form
         form.appendChild(ktInput)
+        form.appendChild(fulllNameInput)
         form.appendChild(genderSelect)
         form.appendChild(addressInput)
         form.appendChild(phoneInput)
