@@ -191,7 +191,15 @@ tfoot tr:last-child td:last-child {
     border-bottom-right-radius: 9px;
 }
 
+.rules{
+	margin:auto;
+	margin-top: 14%;
+	text-align: center;
+}
 
+li{
+	list-style: none;
+}
 
 /*
     Titill á aðalsíðu
