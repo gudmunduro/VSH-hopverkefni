@@ -18,12 +18,14 @@
 
     $conn = connect();
     $sql = $conn->prepare("SELECT kennitala FROM notendur WHERE kennitala = ? AND lykilord = ?");
-    $sql->bind_param("ss", $kennitala, $password);
+    $sql->bind_param("ss", $kennitala, openssl_digest($password, "sha512"));
     $sql->execute();
-    if ($sql === true)
+    if ($sql->get_result()->num_rows > 0)
     {
         $_SESSION["kennitala"] = $kennitala;
+        header("location: ".$redirect);
+        die();
     }
     $sql->close();
-    header("location: ".$redirect);
+    die("Kennitala eða lykilorð er ekki rétt");
 ?>

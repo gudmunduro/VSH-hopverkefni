@@ -31,7 +31,7 @@
 
    $conn = connect();
    $sql = $conn->prepare("INSERT INTO notendur (kennitala, fulltnafn, kyn, heimilisfang, simanumer, felag, netfang, lykilord) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-   $sql->bind_param("ssssssss", $kennitala, $fullname, $gender, $address, $phone, $club, $email, $password);
+   $sql->bind_param("ssssssss", $kennitala, $fullname, $gender, $address, $phone, $club, $email, openssl_digest($password, "sha512"));
    $sql->execute();
    if ($sql === true)
    {
