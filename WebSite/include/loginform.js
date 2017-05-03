@@ -18,6 +18,7 @@ class LoginForm {
         let passwordInput = document.createElement("input")
         let loginButton = document.createElement("input")
         let cancelButton = document.createElement("input")
+        let redirect = document.createElement("input")
 
         this.div.className = "loginDiv"
         this.div.id = "loginForm"
@@ -45,10 +46,16 @@ class LoginForm {
         cancelButton.value = "Loka"
         cancelButton.onclick = this.hide
 
+        redirect.type = "text"
+        redirect.value = this.redirect
+        redirect.name = "redirect"
+        redirect.style.display = "none"
+
         form.appendChild(kennitalaInput)
         form.appendChild(passwordInput)
         form.appendChild(loginButton)
         form.appendChild(cancelButton)
+        form.appendChild(redirect)
 
         this.div.appendChild(title)
         this.div.appendChild(form)
@@ -68,6 +75,10 @@ class LoginForm {
 
     hide()
     {
+        if (!$("#loginForm").length)
+        {
+            return;
+        }
         $("#loginForm").css({
             transform: "scale(0.7) translateX(-70%)",
             opacity: "0"

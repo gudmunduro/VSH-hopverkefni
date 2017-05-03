@@ -171,6 +171,7 @@ class Form {
         form.appendChild(submit)
         form.appendChild(useOldAccount)
         form.appendChild(cancel)
+        form.appendChild(redirectLink)
 
         div.appendChild(title)
         div.appendChild(form)
