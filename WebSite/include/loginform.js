@@ -14,7 +14,7 @@ class LoginForm {
         this.div = document.createElement("div")
         let title = document.createElement("h1")
         let form = document.createElement("form")
-        let usernameInput = document.createElement("input")
+        let kennitalaInput = document.createElement("input")
         let passwordInput = document.createElement("input")
         let loginButton = document.createElement("input")
         let cancelButton = document.createElement("input")
@@ -22,15 +22,17 @@ class LoginForm {
         this.div.className = "loginDiv"
         this.div.id = "loginForm"
         this.div.style.display = "none"
+        this.div.style.transform = "scale(1.3) translateX(-40%)"
+        this.div.style.opacity = "0"
 
         form.method = "post"
         form.action = "/hv/api/login.php"
 
         title.innerHTML = "Innskráning"
 
-        usernameInput.type = "text"
-        usernameInput.placeholder = "Notandanafn"
-        usernameInput.name = "username"
+        kennitalaInput.type = "text"
+        kennitalaInput.placeholder = "Kennitala"
+        kennitalaInput.name = "kennitala"
 
         passwordInput.type = "password"
         passwordInput.placeholder = "Lykilorð"
@@ -43,7 +45,7 @@ class LoginForm {
         cancelButton.value = "Loka"
         cancelButton.onclick = this.hide
 
-        form.appendChild(usernameInput)
+        form.appendChild(kennitalaInput)
         form.appendChild(passwordInput)
         form.appendChild(loginButton)
         form.appendChild(cancelButton)
@@ -55,12 +57,24 @@ class LoginForm {
 
     show()
     {
-        this.div.style.display = ""
+        $("#loginForm").css("display", "")
+        setTimeout(function () {
+            $("#loginForm").css({
+                transform: "",
+                opacity: ""
+            })
+        }, 10)
     }
 
     hide()
     {
-        $("#loginForm").remove()
+        $("#loginForm").css({
+            transform: "scale(0.7) translateX(-70%)",
+            opacity: "0"
+        })
+        setTimeout(function () {
+            $("#loginForm").remove()
+        }, 300)
     }
 }
 

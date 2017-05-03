@@ -3,13 +3,11 @@
     background-color: #F5F5F5;
 }
 .mainBody {
-	overflow: hidden;
     background-image: url(img/main_background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center top;
-    height: 100vh;
 }
 
 
@@ -318,6 +316,7 @@ li{
     border: 2px solid rgba(91, 91, 91, 0.54);
     border-radius: 5px;
     box-shadow: 0 0 8px black;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 .loginDiv h1{
     color: white;
