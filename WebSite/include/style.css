@@ -131,10 +131,10 @@
 
 
 /*
-    Tafla    
+    Tafla í dagskra
 */
 
-table {
+.table {
     margin:auto;
     margin-top:5em;
     border-collapse: separate;
@@ -142,51 +142,51 @@ table {
     color: #4a4a4d;
     font: 14px/1.4 "Lucida Console", Monaco, monospace;
 }
-th,
-td {
+.table th,
+.table td {
     padding: 12px 17px;
     vertical-align: middle;
 }
-thead {
-	overflow: hidden;
+.table thead {
+    overflow: hidden;
     background: #22caff;
     background: linear-gradient(#22caff, #3cd0ff);
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
 }
-th:first-child {
+.table th:first-child {
     border-top-left-radius: 9px;
     text-align: left;
 }
-th:last-child {
+.table th:last-child {
     border-top-right-radius: 9px;
 }
-tbody tr:nth-child(even) {
+.table tbody tr:nth-child(even) {
     background: #ff7e55;
 }
-tbody tr:nth-child(odd) {
+.table tbody tr:nth-child(odd) {
     background: #e2f8ff;
 }
-td {
+.table td {
     border-bottom: 1px solid #7B7C7F;
     border-right: 1px solid #7B7C7F;
 }
-td:first-child {
+.table td:first-child {
     border-left: 1px solid #7B7C7F;
 }
-tfoot {
+.table tfoot {
     overflow: hidden;
 }
-tfoot tr:last-child {
+.table tfoot tr:last-child {
     background: #6fdcff;
     color: #1b0634;
     font-weight: bold;
 }
-tfoot tr:last-child td:first-child {
+.table tfoot tr:last-child td:first-child {
     border-bottom-left-radius: 9px;
 }
-tfoot tr:last-child td:last-child {
+.table tfoot tr:last-child td:last-child {
     border-bottom-right-radius: 9px;
 }
 
@@ -198,6 +198,42 @@ tfoot tr:last-child td:last-child {
 
 li{
 	list-style: none;
+}
+
+/*
+    Aðgangssíða
+*/
+
+.accountTitle {
+    margin-top: 100px;
+    text-align: center;
+    color: #757575;
+    font-weight: lighter;
+    font-size: 4.5em;
+}
+.accountTable {
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.accountTable tbody tr{
+
+}
+.accountTable tbody td{
+    border: 0.01em solid rgba(174, 174, 174, 0.50);
+    margin: 1px;
+    font-size: 1.2em;
+    padding: 20px 40px;
+    color: #4f4f4f;
+}
+.accountTable tbody td a{
+    color: #2196F3;
+    transition: color 0.3s;
+    user-select: none;
+}
+.accountTable tbody td a:hover{
+    color: #0D47A1;
+    cursor: default;
 }
 
 /*

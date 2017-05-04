@@ -9,6 +9,7 @@ function connect()
     {
         die("Villa: villa kom upp við SQL tengingu");
     }
+    $conn->set_charset("utf-8");
     return $conn;
 }
 

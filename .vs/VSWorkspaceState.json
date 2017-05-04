@@ -2,10 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\WebSite",
+    "\\WebSite\\adgangur",
     "\\WebSite\\Dagskra",
     "\\WebSite\\include",
     "\\WebSite\\Reglur",
-    "\\WebSite\\Samband"
+    "\\WebSite\\Samband",
+    "\\WebSite\\skraning"
   ],
+  "SelectedNode": "\\WebSite\\include\\style.css",
   "PreviewInSolutionExplorer": false
 }
