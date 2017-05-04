@@ -1,6 +1,6 @@
 ﻿body
 {
-    background-color: #F5F5F5;
+    background-color: #C4C4C4;
 }
 .mainBody {
     background-image: url(img/main_background.jpg);
@@ -194,6 +194,10 @@
 	margin:auto;
 	margin-top: 14%;
 	text-align: center;
+}
+
+.no_bar{
+	text-decoration: none;
 }
 
 li{
