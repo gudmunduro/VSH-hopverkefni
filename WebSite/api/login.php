@@ -9,7 +9,7 @@
     }
 
     $kennitala = $_POST["kennitala"];
-    $password = $_POST["password"];
+    $password = openssl_digest($_POST["password"], "sha512");
     $redirect = $_POST["redirect"];
 
     if (!is_numeric($kennitala) || strlen($kennitala) != 10)
@@ -19,7 +19,7 @@
 
     $conn = connect();
     $sql = $conn->prepare("SELECT kennitala, fulltnafn FROM notendur WHERE kennitala = ? AND lykilord = ?");
-    $sql->bind_param("ss", $kennitala, openssl_digest($password, "sha512"));
+    $sql->bind_param("ss", $kennitala, $password);
     $sql->execute();
     $result = $sql->get_result();
     if ($result->num_rows > 0)
@@ -27,7 +27,7 @@
         while ($row = $result->fetch_assoc())
         {
             $_SESSION["kennitala"] = $kennitala;
-            $_SESSION["firstname"] = utf8_encode(fullNameToFirstName($row["fulltnafn"]));
+            $_SESSION["firstname"] = fullNameToFirstName($row["fulltnafn"]);
             header("location: ".$redirect);
             die();
         }

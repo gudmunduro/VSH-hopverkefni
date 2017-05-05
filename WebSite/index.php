@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 include "api/functions.php";
 
@@ -16,6 +16,14 @@ include "api/functions.php";
         <script src="include/menu.js"></script>
         <script src="include/homepage.js"></script>
         <script src="include/loginform.js"></script>
+        <?php
+          $loggedIn = "false";
+          if (!empty($_SESSION["kennitala"]))
+          {
+              $loggedIn = "true";
+          }
+          echo "<script> var loggedIn = {$loggedIn};</script>\n"
+        ?>
         <title>Torfærukeppni</title>
     </head>
     <body class="mainBody">

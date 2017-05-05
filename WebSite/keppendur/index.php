@@ -11,7 +11,7 @@ if ($result->num_rows > 0)
 {
     while($row = $result->fetch_assoc())
     {
-        array_push($keppendur, array("nafn" => utf8_encode($row["nafn"]), "flokkur" => utf8_encode($row["flokkur"])));
+        array_push($keppendur, array("nafn" => $row["nafn"], "flokkur" => $row["flokkur"]));
     }
 }
 ?>

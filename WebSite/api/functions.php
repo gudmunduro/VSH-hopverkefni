@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 function fullNameToFirstName($fullname)
 {
@@ -9,7 +9,7 @@ function accountMenuItem($redirect)
 {
     if (empty($_SESSION["kennitala"]))
     {
-        return "<a onclick=\"createSimpleLogin(&quot;".$redirect."&quot;)\" id=\"menuOption5\">Innskrá</a>";
+        return "<a onclick=\"createSimpleLogin(&quot;{$redirect}&quot;)\" id=\"menuOption5\">Innskrá</a>";
     }
     else
     {
@@ -20,6 +20,11 @@ function accountMenuItem($redirect)
 function accountMenuText()
 {
     return "<i class=\"fa fa-user\" aria-hidden=\"true\"></i> ".$_SESSION["firstname"];
+}
+
+function between($num, $from, $to)
+{
+    return ($from < $num && $to > $num);
 }
 
 ?>

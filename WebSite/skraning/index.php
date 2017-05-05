@@ -13,6 +13,7 @@ include "../api/functions.php";
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../include/menu.js"></script>
         <script src="../include/loginform.js"></script>
+        <script src="../include/registration.js"></script>
     </head>
     <body>
         <nav class="mobileNav" id="mobileNav">
@@ -29,14 +30,14 @@ include "../api/functions.php";
             </ul>
         </nav>
         <h1 class="registrationTitle">Skráning</h1>
-        <div>
+        <div class="registrationDiv">
             <h1>Veldu flokk</h1>
             <ul>
-                <li><a>Götubílar</a></li>
-                <li><a>Sérútbúnir</a></li>
-                <li><a>Sérútbúnir götubílar</a></li>
+                <li><a onclick="onSelection(options.streetlegal.id)" id="option1" >Götubílar</a></li>
+                <li><a onclick="onSelection(options.unlimited.id)" id="option2" >Sérútbúnir</a></li>
+                <li><a onclick="onSelection(options.modified.id)" id="option3" >Sérútbúnir götubílar</a></li>
             </ul>
-            <a>Staðfesta skráningu</a>
+            <a onclick="register()" class="confirmButton">Staðfesta skráningu</a>
         </div>
     </body>
 </html>

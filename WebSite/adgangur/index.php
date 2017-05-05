@@ -30,12 +30,12 @@
     {
         while ($row = $result->fetch_assoc())
         {
-            $fullname = utf8_encode($row["fulltnafn"]);
-            $gender = utf8_encode($row["kyn"]);
-            $address = utf8_encode($row["heimilisfang"]);
-            $phonenumber = utf8_encode($row["simanumer"]);
-            $club = utf8_encode($row["felag"]);
-            $email = utf8_encode($row["netfang"]);
+            $fullname = $row["fulltnafn"];
+            $gender = $row["kyn"];
+            $address = $row["heimilisfang"];
+            $phonenumber = $row["simanumer"];
+            $club = $row["felag"];
+            $email = $row["netfang"];
         }
     }
     else

@@ -193,7 +193,7 @@ class Form {
 
     useOldAccount()
     {
-        createSimpleLogin("/hv")
+        createSimpleLogin("/hv/skraning")
     }
 
     // close
@@ -254,6 +254,11 @@ function hideMainDiv()
 
 function openForm()
 {
+    if (loggedIn)
+    {
+        location.href = "/hv/skraning"
+        return false
+    }
     form = new Form()
     return false
 }

@@ -1,6 +1,7 @@
 <?php
    session_start();
    include "sql.php";
+   include "functions.php";
 
    if (empty($_POST["kennitala"]) || empty($_POST["fullname"]) || empty($_POST["gender"]) || empty($_POST["address"]) ||
         empty($_POST["phone"]) || empty($_POST["club"]) || empty($_POST["email"]) || empty($_POST["password"]) ||
@@ -16,11 +17,11 @@
    $phone = $_POST["phone"];
    $club = $_POST["club"];
    $email = $_POST["email"];
-   $password = $_POST["password"];
-   $confirmpassword = $_POST["password"];
+   $password = openssl_digest($_POST["password"], "sha512");
+   $confirmpassword = $_POST["confirmpassword"];
    $redirect = $_POST["redirect"];
 
-   if ($password != $confirmpassword)
+   if ($_POST["password"] != $confirmpassword)
    {
        die("Lykilorðin eru ekki eins");
    }
@@ -31,12 +32,10 @@
 
    $conn = connect();
    $sql = $conn->prepare("INSERT INTO notendur (kennitala, fulltnafn, kyn, heimilisfang, simanumer, felag, netfang, lykilord) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-   $sql->bind_param("ssssssss", $kennitala, $fullname, $gender, $address, $phone, $club, $email, openssl_digest($password, "sha512"));
+   $sql->bind_param("ssssssss", $kennitala, $fullname, $gender, $address, $phone, $club, $email, $password);
    $sql->execute();
-   if ($sql === true)
-   {
-       $_SESSION["kennitala"] = $kennitala;
-   }
    $sql->close();
+   $_SESSION["kennitala"] = $kennitala;
+   $_SESSION["firstname"] = fullNameToFirstName($fullname);
    header("location: ".$redirect);
 ?>

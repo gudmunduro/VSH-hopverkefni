@@ -532,7 +532,72 @@ li{
     font-size: 4.5em;
 }
 .registrationDiv{
-
+    margin: 10px auto;
+    width: 300px;
+}
+.registrationDiv h1{
+    text-align: center;
+    color: #757575;
+    font-weight: lighter;
+}
+.registrationDiv ul{
+    list-style: none;
+    padding: 0;
+}
+.registrationDiv li{
+    margin: 0;
+    padding: 0;
+}
+.registrationDiv li a{
+    display: block;
+    color: #BDBDBD;
+    background-color: #EEEEEE;
+    font-size: 2.0em;
+    padding: 5px;
+    width: 300px;
+    margin: 0;
+    transition: transform 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-in;
+}
+.registrationDiv li a.selected{
+    transform: scale(1.1);
+    background-color: #ff5722;
+    box-shadow: 0 0 24px grey;
+}
+.registrationDiv li a:hover{
+    cursor: default;
+    color: #EEEEEE;
+    background-color: #FF7043;
+}
+.registrationDiv a.confirmButton{
+    display: block;
+    margin: 5px auto;
+    width: 180px;
+    color: white;
+    font-family: Verdana;
+    font-weight: lighter;
+    font-size: 1.3em;
+    background-color: #FF5722;
+    border: 2px solid #F4511E;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 0 2px darkgray;
+    transition: background-color 0.2s ease-out, border 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+.registrationDiv a.confirmButton:hover{
+    cursor: default;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px darkgray;
+    background-color: #BF360C;
+    border-color: #BF360C;
+    cursor: default;
+}
+.registrationDiv a.confirmButton:active{
+    transform: scale(0.95);
+    box-shadow: 0 0 0 darkgray;
+    background-color: darkgray;
+    border-color: darkgray;
 }
 
 
