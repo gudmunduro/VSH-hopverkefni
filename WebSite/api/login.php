@@ -1,6 +1,7 @@
 <?php
     session_start();
     include "sql.php";
+    include "functions.php";
 
     if (empty($_POST["kennitala"]) || empty($_POST["password"]) || empty($_POST["redirect"]))
     {
@@ -20,9 +21,11 @@
     $sql = $conn->prepare("SELECT kennitala FROM notendur WHERE kennitala = ? AND lykilord = ?");
     $sql->bind_param("ss", $kennitala, openssl_digest($password, "sha512"));
     $sql->execute();
-    if ($sql->get_result()->num_rows > 0)
+    $result = $sql->get_result();
+    if ($result->num_rows > 0)
     {
         $_SESSION["kennitala"] = $kennitala;
+        $_SESSION["firstName"] = fullNameToFirstName($result[0]["fulltnafn"]);
         header("location: ".$redirect);
         die();
     }

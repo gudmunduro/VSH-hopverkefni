@@ -1,5 +1,6 @@
 ﻿<?php
     include "../api/sql.php";
+    include "../api/functions.php";
 
     session_start();
     if (empty($_SESSION["kennitala"]))
@@ -14,6 +15,7 @@
     $phonenumber = "";
     $club = "";
     $email = "";
+    $firstname = $_SESSION["firstname"];
 
     $conn = connect();
     $sql = $conn->prepare("SELECT * FROM notendur WHERE kennitala=?");
@@ -67,9 +69,13 @@
                 <li><a href="../adgangur" id="menuOption5">Aðgangur</a></li>
             </ul>
         </nav>
-        <h1 class="accountTitle"><i class="fa fa-user" aria-hidden="true"></i> <?php echo $fullname; ?></h1>
+        <h1 class="accountTitle"><i class="fa fa-user" aria-hidden="true"></i> <?php echo $firstname; ?></h1>
         <table class="accountTable">
             <tbody>
+                <tr>
+                    <td>Fullt nafn</td>
+                    <td><?php echo $fullname; ?> (<a>Breyta</a>)</td>
+                </tr>
                 <tr>
                     <td>Kennitala</td>
                     <td><?php echo $kennitala; ?> (<a>Breyta</a>)</td>
