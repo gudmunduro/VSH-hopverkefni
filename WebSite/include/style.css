@@ -12,6 +12,15 @@
 }
 
 
+/*
+    allt    
+*/
+
+a{
+    text-decoration: none;
+}
+
+
 
 /*
     Header og takki til þess opna valmyndina fyrir mobile
@@ -209,6 +218,36 @@ li{
     font-weight: lighter;
     font-size: 4.5em;
 }
+.accountLogoutButton{
+    display: block;
+    margin: 5px auto;
+    width: 180px;
+    color: white;
+    font-family: Verdana;
+    font-weight: lighter;
+    font-size: 2.0em;
+    background-color: #FF5722;
+    border: 2px solid #F4511E;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 0 2px darkgray;
+    transition: background-color 0.2s ease-out, border 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+.accountLogoutButton:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px darkgray;
+    background-color: #BF360C;
+    border-color: #BF360C;
+    cursor: default;
+}
+.accountLogoutButton:active{
+    transform: scale(0.95);
+    box-shadow: 0 0 0 darkgray;
+    background-color: darkgray;
+    border-color: darkgray;
+}
 .accountTable {
     margin: 20px auto;
     border-collapse: separate;
@@ -371,6 +410,7 @@ li{
     margin: 10px auto;
     padding: 3px;
     font-size: 1.1em;
+    color: white;
 }
 .loginDiv input[type=submit], .loginDiv input[type=button] {
     display: block;

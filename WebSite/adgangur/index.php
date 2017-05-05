@@ -65,11 +65,12 @@
                 <li><a href="../" id="menuOption1">Aðalsíða</a></li>
                 <li><a href="../Dagskra" id="menuOption2">Dagskrá</a></li>
                 <li><a href="../Reglur" id="menuOption3">Reglur</a></li>
-                <li><a href="../Samband" id="menuOption4">Hafðu samband</a></li>
-                <li><a href="../adgangur" id="menuOption5">Aðgangur</a></li>
+                <li><a href="../Keppendur" id="menuOption4">Keppendur</a></li>
+                <li><a href="../adgangur" id="menuOption5"><?php echo accountMenuText() ?></a></li>
             </ul>
         </nav>
         <h1 class="accountTitle"><i class="fa fa-user" aria-hidden="true"></i> <?php echo $firstname; ?></h1>
+        <a class="accountLogoutButton" href="../api/logout.php">Útskrá</a>
         <table class="accountTable">
             <tbody>
                 <tr>
@@ -78,7 +79,7 @@
                 </tr>
                 <tr>
                     <td>Kennitala</td>
-                    <td><?php echo $kennitala; ?> (<a>Breyta</a>)</td>
+                    <td><?php echo $kennitala; ?></td>
                 </tr>
                 <tr>
                     <td>Kyn</td>

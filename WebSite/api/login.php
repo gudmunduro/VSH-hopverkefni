@@ -18,16 +18,19 @@
     }
 
     $conn = connect();
-    $sql = $conn->prepare("SELECT kennitala FROM notendur WHERE kennitala = ? AND lykilord = ?");
+    $sql = $conn->prepare("SELECT kennitala, fulltnafn FROM notendur WHERE kennitala = ? AND lykilord = ?");
     $sql->bind_param("ss", $kennitala, openssl_digest($password, "sha512"));
     $sql->execute();
     $result = $sql->get_result();
     if ($result->num_rows > 0)
     {
-        $_SESSION["kennitala"] = $kennitala;
-        $_SESSION["firstName"] = fullNameToFirstName($result[0]["fulltnafn"]);
-        header("location: ".$redirect);
-        die();
+        while ($row = $result->fetch_assoc())
+        {
+            $_SESSION["kennitala"] = $kennitala;
+            $_SESSION["firstname"] = utf8_encode(fullNameToFirstName($row["fulltnafn"]));
+            header("location: ".$redirect);
+            die();
+        }
     }
     $sql->close();
     die("Kennitala eða lykilorð er ekki rétt");

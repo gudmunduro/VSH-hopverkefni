@@ -57,9 +57,9 @@ class Form {
         male.innerHTML = "Karl"
         female.innerHTML = "Kona"
         other.innerHTML = "Annað"
-        male.value = "male"
-        female.value = "female"
-        other.value = "other"
+        male.value = "kk"
+        female.value = "kvk"
+        other.value = "hvk"
         genderSelect.appendChild(male)
         genderSelect.appendChild(female)
         genderSelect.appendChild(other)
