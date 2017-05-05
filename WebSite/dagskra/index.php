@@ -1,10 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+include "../api/functions.php";
+?>
+<!DOCTYPE html>
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="../include/style.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../include/menu.js"></script>
@@ -19,10 +24,10 @@
             <ul>
                 <li><h2>Valmynd</h2></li>
                 <li><a href="../" id="menuOption1">Aðalsíða</a></li>
-                <li><a href="../Dagskra" id="menuOption2">Dagskrá</a></li>
-                <li><a href="../Reglur" id="menuOption3">Reglur</a></li>
-                <li><a href="../Keppendur" id="menuOption4">Keppendur</a></li>
-                <li><a onclick="createSimpleLogin(&quot;/hv/Dagskra/&quot;)" id="menuOption5">Innskrá</a></li>
+                <li><a href="../dagskra" id="menuOption2">Dagskrá</a></li>
+                <li><a href="../reglur" id="menuOption3">Reglur</a></li>
+                <li><a href="../keppendur" id="menuOption4">Keppendur</a></li>
+                <li><?php echo accountMenuItem("/hv/dagskra"); ?></li>
             </ul>
         </nav>
         <table class="table">
