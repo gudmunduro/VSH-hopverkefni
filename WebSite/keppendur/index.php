@@ -1,7 +1,19 @@
-﻿<?php
+<?php
 session_start();
+include "../api/sql.php";
 include "../api/functions.php";
-$keppendur = [1, 2, 3, 4, 5, 6, 7, 8];
+
+$keppendur = array();
+$conn = connect();
+$sql = "SELECT notendur.fulltnafn AS nafn, keppni.flokkur AS flokkur FROM keppni INNER JOIN notendur ON keppni.kennitala = notendur.kennitala";
+$result = $conn->query($sql);
+if ($result->num_rows > 0)
+{
+    while($row = $result->fetch_assoc())
+    {
+        array_push($keppendur, array("nafn" => utf8_encode($row["nafn"]), "flokkur" => utf8_encode($row["flokkur"])));
+    }
+}
 ?>
 <!DOCTYPE html>
 
@@ -32,8 +44,8 @@ $keppendur = [1, 2, 3, 4, 5, 6, 7, 8];
             </ul>
         </nav>
 
-        <h1>Keppendur</h1>
-        <table>
+        <h1 class="participantsTitle">Keppendur</h1>
+        <table class="participantsTable">
             <thead>
                 <tr>
                     <td>Nafn</td>
@@ -46,8 +58,8 @@ $keppendur = [1, 2, 3, 4, 5, 6, 7, 8];
             {
             ?>
                 <tr>
-                    <td>1</td>
-                    <td>2</td>
+                    <td><?php echo $keppendur[$i]["nafn"]; ?></td>
+                    <td><?php echo $keppendur[$i]["flokkur"]; ?></td>
                 </tr>
             <?php
             }

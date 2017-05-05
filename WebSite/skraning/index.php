@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 include "../api/functions.php";
 ?>
@@ -28,5 +28,15 @@ include "../api/functions.php";
                 <li><?php echo accountMenuItem("/hv/keppendur"); ?></li>
             </ul>
         </nav>
+        <h1 class="registrationTitle">Skráning</h1>
+        <div>
+            <h1>Veldu flokk</h1>
+            <ul>
+                <li><a>Götubílar</a></li>
+                <li><a>Sérútbúnir</a></li>
+                <li><a>Sérútbúnir götubílar</a></li>
+            </ul>
+            <a>Staðfesta skráningu</a>
+        </div>
     </body>
 </html>

@@ -137,6 +137,7 @@ class Form {
 
         // buttons
         submit.type = "submit"
+        submit.value = "Nýskrá"
         cancel.type = "button"
         cancel.value = "Hætta við"
         cancel.onclick = Form.remove
