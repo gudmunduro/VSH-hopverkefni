@@ -46,10 +46,12 @@ class Form {
         ktInput.type = "text"
         ktInput.placeholder = "Kennitala"
         ktInput.name = "kennitala"
+        ktInput.required = true
 
         fulllNameInput.type = "text"
         fulllNameInput.placeholder = "Fullt nafn"
         fulllNameInput.name = "fullname"
+        fulllNameInput.required = true
         // inputs - gender
         let male = document.createElement("option")
         let female = document.createElement("option")
@@ -64,14 +66,18 @@ class Form {
         genderSelect.appendChild(female)
         genderSelect.appendChild(other)
         genderSelect.name = "gender"
+        genderSelect.required = true
         //
         addressInput.type = "text"
         addressInput.placeholder = "Heimilisfang"
         addressInput.name = "address"
+        addressInput.required = true
 
         phoneInput.type = "tel"
         phoneInput.placeholder = "Símanúmer"
         phoneInput.name = "phone"
+        phoneInput.required = true
+        phoneInput.pattern = "[0-9]{10}"
 
         // inputs - club
         let option1 = document.createElement("option")
@@ -122,18 +128,22 @@ class Form {
         clubSelect.appendChild(option10)
         clubSelect.appendChild(option11)
         clubSelect.name = "club"
+        clubSelect.required = true
         //
         emailInput.type = "email"
         emailInput.placeholder = "Netfang"
         emailInput.name = "email"
+        emailInput.required = true
 
         passwordInput.type = "password"
         passwordInput.placeholder = "Lykilorð"
         passwordInput.name = "password"
+        passwordInput.required = true
 
         confirmPasswordInput.type = "password"
         confirmPasswordInput.placeholder = "Staðfesta lykilorð"
         confirmPasswordInput.name = "confirmpassword"
+        confirmPasswordInput.required = true
 
         // buttons
         submit.type = "submit"

@@ -34,10 +34,12 @@ class LoginForm {
         kennitalaInput.type = "text"
         kennitalaInput.placeholder = "Kennitala"
         kennitalaInput.name = "kennitala"
+        kennitalaInput.required = true
 
         passwordInput.type = "password"
         passwordInput.placeholder = "Lykilorð"
         passwordInput.name = "password"
+        passwordInput.required = true
 
         loginButton.type = "submit"
         loginButton.value = "Innskrá"
