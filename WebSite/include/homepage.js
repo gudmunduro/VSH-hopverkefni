@@ -249,9 +249,104 @@ class Form {
     }
 }
 
+class AboutPage {
+
+    constructor()
+    {
+        this.title = "Um keppnina"
+        this.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius erat vitae dapibus lacinia. Donec id ligula libero. Cras a purus risus. Donec vitae euismod nulla. Mauris malesuada faucibus tortor non dictum. Vivamus consectetur mauris ac dictum ultricies. Maecenas eleifend dapibus dui eu cursus. Integer ullamcorper, enim ut fringilla finibus, sem nulla porta augue, blandit lobortis ipsum ex vitae est. Vestibulum sit amet mi tortor. Ut porttitor dapibus faucibus."
+
+        let div = document.createElement("div")
+        let title = document.createElement("h1")
+        let paragraph = document.createElement("p")
+        let closeButton = document.createElement("a")
+
+        div.className = "mainDiv"
+        div.id = "aboutPage"
+        $(div).css({
+            display: "none",
+            transform: "translatey(-100px)",
+            opacity: "0",
+            transitionTimingFunction: "ease-in"
+        })
+
+        title.className = "mainTitle"
+        title.innerHTML = this.title
+
+        paragraph.className = "mainParagraph"
+        paragraph.innerHTML = this.text
+
+        closeButton.className = "openFormButton"
+        closeButton.innerHTML = "Loka"
+        closeButton.onclick = AboutPage.remove
+
+        div.appendChild(title)
+        div.appendChild(paragraph)
+        div.appendChild(closeButton)
+
+        document.body.appendChild(div)
+
+        $("#mainDiv").css({
+            animation: "hideMainDiv 0.5s forwards",
+            animationTimingFunction: "ease-out"
+        })
+        setTimeout(hideMainDiv, 500)
+        setTimeout(this.show, 500)
+        setTimeout(this.startAnimation, 520)
+    }
+
+    show()
+    {
+        $("#aboutPage").css("display", "")
+    }
+
+    startAnimation()
+    {
+        $("#aboutPage").removeAttr("style")
+    }
+
+    // close
+
+    static remove()
+    {
+        AboutPage.startCloseAnimation()
+        setTimeout(AboutPage.removeForm, 500)
+        setTimeout(AboutPage.showMainForm, 510)
+        setTimeout(AboutPage.animateMainFormIn, 510)
+        setTimeout(AboutPage.finishRemoval, 1010)
+    }
+
+    static startCloseAnimation() {
+        $("#aboutPage").css({
+            transform: "translatey(-100px)",
+            transitionTimingFunction: "ease-out",
+            opacity: "0"
+        })
+    }
+
+    static removeForm() {
+        $("#aboutPage").remove()
+    }
+
+    static showMainForm() {
+        document.getElementById("mainDiv").style.display = ""
+    }
+
+    static animateMainFormIn() {
+        document.getElementById("mainDiv").style.animation = "hideMainDiv 0.5s forwards"
+        document.getElementById("mainDiv").style.animationDirection = "reverse"
+        document.getElementById("mainDiv").style.animationTimingFunction = "ease-in"
+    }
+
+    static finishRemoval() {
+        $("#mainDiv").removeAttr("style")
+    }
+}
+
 // Global variables
 
 var form
+var aboutPage
 
 // Functions
 
@@ -270,5 +365,11 @@ function openForm()
         return false
     }
     form = new Form()
+    return false
+}
+
+function openAboutPage()
+{
+    aboutPage = new AboutPage()
     return false
 }

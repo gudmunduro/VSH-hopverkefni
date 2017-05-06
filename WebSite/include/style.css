@@ -326,7 +326,7 @@ li{
 }
 .openFormButton {
     display: block;
-    margin: 0 auto;
+    margin: 5px auto;
     width: 270px;
     color: white;
     font-family: Verdana;
@@ -343,6 +343,11 @@ li{
     background-color: #FF5722;
     border-color: #FF5722;
     cursor: default;
+}
+.mainParagraph{
+    margin-top: 10px;
+    font-family: Verdana;
+    color: white;
 }
 
 @keyframes hideMainDiv{

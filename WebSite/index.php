@@ -41,8 +41,9 @@ include "api/functions.php";
             </ul>
         </nav>
         <div class="mainDiv" id="mainDiv">
-            <h1 class="mainTitle">Torfærukeppnir 2017</h1>
+            <h1 class="mainTitle">Torfærukeppni 2017</h1>
             <a class="openFormButton" onclick="openForm()">Skráning</a>
+            <a class="openFormButton" onclick="openAboutPage()">Um keppnina</a>
         </div>
     </body>
 </html>
