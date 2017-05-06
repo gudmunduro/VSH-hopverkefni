@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     include "../api/sql.php";
     include "../api/functions.php";
 
@@ -55,6 +55,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../include/menu.js"></script>
         <script src="../include/loginform.js"></script>
+        <script src="../include/account.js"></script>
     </head>
     <body>
         <nav class="mobileNav" id="mobileNav">
@@ -76,7 +77,7 @@
             <tbody>
                 <tr>
                     <td>Fullt nafn</td>
-                    <td><?php echo $fullname; ?> (<a>Breyta</a>)</td>
+                    <td><?php echo $fullname; ?> (<a onclick="change(changeable.name)" >Breyta</a>)</td>
                 </tr>
                 <tr>
                     <td>Kennitala</td>
@@ -84,27 +85,27 @@
                 </tr>
                 <tr>
                     <td>Kyn</td>
-                    <td><?php echo $gender; ?> (<a>Breyta</a>)</td>
+                    <td><?php echo $gender; ?> (<a onclick="change(changeable.gender)" >Breyta</a>)</td>
                 </tr>
                 <tr>
                     <td>Heimilsfang</td>
-                    <td><?php echo $address; ?> (<a>Breyta</a>)</td>
+                    <td><?php echo $address; ?> (<a onclick="change(changeable.address)" >Breyta</a>)</td>
                 </tr>
                 <tr>
                     <td>Símanumer</td>
-                    <td><?php echo $phonenumber; ?> (<a>Breyta</a>)</td>
+                    <td><?php echo $phonenumber; ?> (<a onclick="change(changeable.phonenumber)" >Breyta</a>)</td>
                 </tr>
                 <tr>
                     <td>Félag</td>
-                    <td><?php echo $club; ?> (<a>Breyta</a>)</td>
+                    <td><?php echo $club; ?> (<a onclick="change(changeable.club)" >Breyta</a>)</td>
                 </tr>
                 <tr>
                     <td>Netfang</td>
-                    <td><?php echo $email; ?> (<a>Breyta</a>)</td>
+                    <td><?php echo $email; ?> (<a onclick="change(changeable.email)" >Breyta</a>)</td>
                 </tr>
                 <tr>
                     <td>Lykilorð</td>
-                    <td><a>Breyta</a></td>
+                    <td><a onclick="changePasswd()" >Breyta</a></td>
                 </tr>
             </tbody>
         </table>

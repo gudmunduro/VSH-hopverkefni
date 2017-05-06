@@ -38,6 +38,7 @@ function onSelection(selection)
                 resetCurrent()
                 selected = selection
                 options.streetlegal.element().addClass("selected")
+                $("#confirmButton").addClass("enabled")
                 break;
             }
         case options.unlimited.id:
@@ -45,6 +46,7 @@ function onSelection(selection)
                 resetCurrent()
                 selected = selection
                 options.unlimited.element().addClass("selected")
+                $("#confirmButton").addClass("enabled")
                 break;
             }
         case options.modified.id:
@@ -52,6 +54,7 @@ function onSelection(selection)
                 resetCurrent()
                 selected = selection
                 options.modified.element().addClass("selected")
+                $("#confirmButton").addClass("enabled")
                 break;
             }
     }
@@ -59,6 +62,10 @@ function onSelection(selection)
 
 function register()
 {
+    if (selected == 0)
+    {
+        return
+    }
     $.ajax({
         type: "POST",
         url: "/hv/api/register.php",

@@ -38,7 +38,7 @@ include "../api/functions.php";
                 <li><a onclick="onSelection(options.unlimited.id)" id="option2" >Sérútbúnir</a></li>
                 <li><a onclick="onSelection(options.modified.id)" id="option3" >Sérútbúnir götubílar</a></li>
             </ul>
-            <a onclick="register()" class="confirmButton">Staðfesta skráningu</a>
+            <a onclick="register()" id="confirmButton" class="confirmButton">Staðfesta skráningu</a>
         </div>
     </body>
 </html>

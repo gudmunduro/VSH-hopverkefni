@@ -3,12 +3,9 @@
     "",
     "\\WebSite",
     "\\WebSite\\adgangur",
-    "\\WebSite\\Dagskra",
-    "\\WebSite\\include",
-    "\\WebSite\\Reglur",
-    "\\WebSite\\Samband",
-    "\\WebSite\\skraning"
+    "\\WebSite\\dagskra",
+    "\\WebSite\\include"
   ],
-  "SelectedNode": "\\WebSite\\adgangur\\index.php",
+  "SelectedNode": "\\WebSite\\include\\registration.js",
   "PreviewInSolutionExplorer": false
 }
