@@ -280,7 +280,7 @@ class AboutPage {
     constructor()
     {
         this.title = "Um keppnina"
-        this.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius erat vitae dapibus lacinia. Donec id ligula libero. Cras a purus risus. Donec vitae euismod nulla. Mauris malesuada faucibus tortor non dictum. Vivamus consectetur mauris ac dictum ultricies. Maecenas eleifend dapibus dui eu cursus. Integer ullamcorper, enim ut fringilla finibus, sem nulla porta augue, blandit lobortis ipsum ex vitae est. Vestibulum sit amet mi tortor. Ut porttitor dapibus faucibus."
+        this.text = "Torfæran á Hellu verður að þessu sinni haldin 23. 13. og verður fyrsta umferð íslandsmótsins í torfæru. Búast má við gríðarlegum tilþrifum að vanda, áin og mýrin á sínum stað og lofum mikilli skemmtun."
 
         let div = document.createElement("div")
         let title = document.createElement("h1")
