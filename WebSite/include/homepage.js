@@ -77,7 +77,6 @@ class Form {
         phoneInput.placeholder = "Símanúmer"
         phoneInput.name = "phone"
         phoneInput.required = true
-        phoneInput.pattern = "[0-9]{10}"
 
         // inputs - club
         let option1 = document.createElement("option")
