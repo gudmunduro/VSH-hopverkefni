@@ -49,5 +49,5 @@
    $sql->close();
    $_SESSION["kennitala"] = $kennitala;
    $_SESSION["firstname"] = fullNameToFirstName($fullname);
-   //header("location: ".$redirect);
+   header("location: ".$redirect);
 ?>
