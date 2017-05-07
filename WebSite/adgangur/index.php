@@ -43,7 +43,6 @@
         die("Óvænt villa(1)");
     }
 
-    if (file_exists("/opt/lampp/phpfiles/Torfaera/ProfilePics/{$kennitala}"))
 ?>
 <!DOCTYPE html>
 
@@ -73,7 +72,23 @@
                 <li><a href="../adgangur" id="menuOption5"><?php echo accountMenuText() ?></a></li>
             </ul>
         </nav>
-        <h1 class="accountTitle"><i class="fa fa-user" aria-hidden="true"></i> <?php echo $firstname; ?></h1>
+        <?php
+            if (hasProfilePic($kennitala))
+            {
+                ?>
+                <picture>
+                    <img class="accountProfilePic" src="../api/getprofilepic.php" />
+                </picture>
+                <?php
+            }
+            else
+            {
+                ?>
+                <i class="fa fa-user accountProfilePicPlaceholder" aria-hidden="true"></i>
+                <?php
+            }
+        ?>
+        <h1 class="accountTitle"><?php echo $firstname; ?></h1>
         <a class="accountLogoutButton" href="../api/logout.php">Útskrá</a>
         <table class="accountTable">
             <tbody>

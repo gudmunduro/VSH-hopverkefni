@@ -33,4 +33,17 @@ function getFileExtension($filename)
     return end($filenamearray);
 }
 
+function hasProfilePic($kennitala)
+{
+    if (file_exists("/opt/lampp/phpfiles/Torfaera/ProfilePics/{$kennitala}.jpg"))
+    {
+        return true;
+    }
+    if (file_exists("/opt/lampp/phpfiles/Torfaera/ProfilePics/{$kennitala}.png"))
+    {
+        return true;
+    }
+    return false;
+}
+
 ?>
