@@ -1,6 +1,12 @@
 <?php
-session_start();
-include "../api/functions.php";
+    session_start();
+    include "../api/functions.php";
+
+    if (empty($_SESSION["kennitala"]))
+    {
+        header("location: /hv");
+        die();
+    }
 ?>
 <!DOCTYPE html>
 

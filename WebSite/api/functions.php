@@ -27,4 +27,10 @@ function between($num, $from, $to)
     return ($from < $num && $to > $num);
 }
 
+function getFileExtension($filename)
+{
+    $filenamearray = explode(".", $filename);
+    return end($filenamearray);
+}
+
 ?>

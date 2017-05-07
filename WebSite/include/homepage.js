@@ -47,6 +47,7 @@ class Form {
         form.className = "form"
         form.action = "api/createaccount.php"
         form.method = "post"
+        form.enctype = "multipart/form-data"
         // inputs
 
 
@@ -171,7 +172,7 @@ class Form {
         setTimeout(this.startAnimation, 520)
 
         // labels
-        profilePicLabel.innerHTML = "Veldu prófíl mynd"
+        profilePicLabel.innerHTML = "Velja prófíl mynd"
         profilePicLabel.htmlFor = "profilepicinput"
         profilePicLabel.id = "profilepiclabel"
 

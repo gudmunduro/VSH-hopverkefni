@@ -42,6 +42,8 @@
     {
         die("Óvænt villa(1)");
     }
+
+    if (file_exists("/opt/lampp/phpfiles/Torfaera/ProfilePics/{$kennitala}"))
 ?>
 <!DOCTYPE html>
 

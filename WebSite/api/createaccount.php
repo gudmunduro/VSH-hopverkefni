@@ -30,9 +30,16 @@
        die("Kennitalan er ekki gild");
    }
 
-   if (!empty($_FILES["profilepic"]))
+   if (!empty($_FILES["profilepic"]["tmp_name"]))
    {
-       move_uploaded_file();
+       $file = $_FILES["profilepic"]["tmp_name"];
+       $fileexstension = getFileExtension($_FILES["profilepic"]["name"]);
+       $allowedExtensions = array("jpg", "png");
+       if (!in_array($fileexstension, $allowedExtensions))
+       {
+           die("Prófíl myndir geta bara verið jpg eða png");
+       }
+       move_uploaded_file($file, "/opt/lampp/phpfiles/Torfaera/ProfilePics/{$kennitala}.{$fileexstension}");
    }
 
    $conn = connect();
@@ -42,5 +49,5 @@
    $sql->close();
    $_SESSION["kennitala"] = $kennitala;
    $_SESSION["firstname"] = fullNameToFirstName($fullname);
-   header("location: ".$redirect);
+   //header("location: ".$redirect);
 ?>
