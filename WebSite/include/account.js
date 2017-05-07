@@ -1,4 +1,6 @@
-﻿// JavaScript source code
+﻿/**
+    Javascript fyrir aðgangs síðuna (/adgandur) 
+*/
 
 var changeable = {
     name: { id: 1, text: "nafn" }, gender: { id: 2, text: "kyn" },

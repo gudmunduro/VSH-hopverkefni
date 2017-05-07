@@ -1,4 +1,14 @@
-﻿
+﻿/**
+    Til þess að nota LoginForm klasann
+    er annaðhvort hægt að búa til nýtt
+    tilvik af LoginForm og kalla á show()
+    eftir það eða bara kalla á
+    createSimpleLogin().
+
+    Redirect er línkur á síðuna sem
+    notandinn verður sendur á ef
+    innskráning tekst.
+*/
 
 class LoginForm {
 
@@ -94,6 +104,10 @@ class LoginForm {
 
 function createSimpleLogin(redirect)
 {
+    if (!$("#loginForm").length)
+    {
+        return
+    }
     let login = new LoginForm(redirect)
     login.show()
 }

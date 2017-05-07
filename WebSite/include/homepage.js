@@ -1,4 +1,8 @@
-﻿
+﻿/**
+    Javascript fyrir aðalsíðuna 
+*/
+
+
 // Classes
 
 class Form {

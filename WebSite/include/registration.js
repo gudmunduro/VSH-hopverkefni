@@ -1,4 +1,7 @@
-﻿// JavaScript source code
+﻿/**
+    Javascript fyrir síðuna
+    til þess að skrá sig í keppnir
+*/
 
 var options = {
     streetlegal: { name: "Götubílar", id: 1, element: function () { return $("#option1"); } },

@@ -4,8 +4,10 @@
     "\\WebSite",
     "\\WebSite\\adgangur",
     "\\WebSite\\dagskra",
-    "\\WebSite\\include"
+    "\\WebSite\\include",
+    "\\WebSite\\keppendur",
+    "\\WebSite\\reglur"
   ],
-  "SelectedNode": "\\WebSite\\include\\registration.js",
+  "SelectedNode": "\\WebSite\\index.php",
   "PreviewInSolutionExplorer": false
 }

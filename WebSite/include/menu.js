@@ -1,4 +1,6 @@
-// JavaScript source code
+/**
+    Javascript fyrir valmyndina 
+*/
 
 
 class Menu {
