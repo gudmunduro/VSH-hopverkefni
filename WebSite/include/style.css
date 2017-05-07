@@ -376,7 +376,7 @@ li{
     margin: 0 auto;
 }
 
-.form input[type=text], .form input[type=tel], .form input[type=email], .form input[type=password], .form select{
+.form input[type=text], .form input[type=tel], .form input[type=email], .form input[type=password], .form select, .form label{
     display: block;
     margin: 20px auto;
     background-color: rgba(69, 69, 69, 0.37);
@@ -628,7 +628,7 @@ li{
     /*
         Skráningarfrom á aðalsíðu
     */
-    .form input[type=text], .form input[type=tel], .form input[type=email], .form input[type=password], .form select{
+    .form input[type=text], .form input[type=tel], .form input[type=email], .form input[type=password], .form select, .form label{
         width: 380px;
     }
     .form select{

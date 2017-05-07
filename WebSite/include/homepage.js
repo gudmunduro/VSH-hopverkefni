@@ -16,6 +16,7 @@ class Form {
         // inputs
         let ktInput = document.createElement("input")
         let fulllNameInput = document.createElement("input")
+        let profilePicInput = document.createElement("input")
         let addressInput = document.createElement("input")
         let phoneInput = document.createElement("input")
         let emailInput = document.createElement("input")
@@ -25,6 +26,8 @@ class Form {
         // select
         let clubSelect = document.createElement("select")
         let genderSelect = document.createElement("select")
+        // labels
+        let profilePicLabel = document.createElement("label")
         // buttons
         let submit = document.createElement("input")
         let useOldAccount = document.createElement("input")
@@ -56,6 +59,7 @@ class Form {
         fulllNameInput.placeholder = "Fullt nafn"
         fulllNameInput.name = "fullname"
         fulllNameInput.required = true
+
         // inputs - gender
         let male = document.createElement("option")
         let female = document.createElement("option")
@@ -166,7 +170,17 @@ class Form {
         setTimeout(this.show, 500)
         setTimeout(this.startAnimation, 520)
 
+        // labels
+        profilePicLabel.innerHTML = "Veldu prófíl mynd"
+        profilePicLabel.htmlFor = "profilepicinput"
+        profilePicLabel.id = "profilepiclabel"
+
         // non visible
+        profilePicInput.type = "file"
+        profilePicInput.name = "profilepic"
+        profilePicInput.id = "profilepicinput"
+        profilePicInput.style.display = "none"
+        profilePicInput.onchange = this.onProfilePicSelect
 
         redirectLink.type = "text"
         redirectLink.name = "redirect"
@@ -176,6 +190,7 @@ class Form {
         // add to form
         form.appendChild(ktInput)
         form.appendChild(fulllNameInput)
+        form.appendChild(profilePicLabel)
         form.appendChild(genderSelect)
         form.appendChild(addressInput)
         form.appendChild(phoneInput)
@@ -187,6 +202,7 @@ class Form {
         form.appendChild(useOldAccount)
         form.appendChild(cancel)
         form.appendChild(redirectLink)
+        form.appendChild(profilePicInput)
 
         div.appendChild(title)
         div.appendChild(form)
@@ -207,6 +223,12 @@ class Form {
     useOldAccount()
     {
         createSimpleLogin("/hv/skraning")
+    }
+
+    onProfilePicSelect(e)
+    {
+        let file = this.files[0]
+        $("#profilepiclabel").text(file.name)
     }
 
     // close

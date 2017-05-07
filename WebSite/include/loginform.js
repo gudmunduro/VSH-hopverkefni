@@ -104,7 +104,7 @@ class LoginForm {
 
 function createSimpleLogin(redirect)
 {
-    if (!$("#loginForm").length)
+    if ($("#loginForm").length)
     {
         return
     }
